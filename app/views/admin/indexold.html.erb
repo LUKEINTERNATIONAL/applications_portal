@@ -1,0 +1,176 @@
+<head>
+	<title>
+			App Gateway
+	</title>
+	<style>
+			#outer_space{
+					width:100%; 	
+					height: 95%;	
+					margin: 1em auto 1.5em auto;
+					border: 2px outset black;
+			}
+			#top{
+					height: 20%;
+					border: 2px outset lightblue;
+			}
+			#title{
+					border: 2px;
+					margin: 1em auto 1.5em auto;
+					font-size: 2.5em;
+					color: lightblue;
+			}
+			#icon{
+			}
+			#text{
+				font-size: 1.5em;			
+			}
+			#middle{
+					height: 70%;
+					border: 2px outset lightblue;
+			}
+			#bottom{
+					height:10%
+								
+			}
+			#input_area{
+					width:50%; 	
+					height: 25%;	
+					top: 20%;
+ 					-webkit-border-radius: 5px;
+          			border-radius: 5px;
+					margin: 1em auto 1.5em auto;
+					border: 2px outset lightblue;
+			}
+			.logo {
+		    float:left;
+		    height: 4.5em;
+		  }
+		.buttons{
+			    border:1px solid #34740e; 
+                 -webkit-border-radius: 3px; 
+                 -moz-border-radius: 3px;
+                 border-radius: 3px;
+                 font-size:28px;
+                 font-family:arial, helvetica, sans-serif; 
+                 padding: 10px 10px 10px 10px; 
+				 margin-left:10px;
+                 text-decoration:none; 
+                 display:inline-block;
+                 text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+                 font-weight:bold; color: #FFFFFF;
+                 background-color: #4ba614; 
+                 background-image: -webkit-gradient(linear, left top, left bottom, from(#4ba614), to(#008c00));
+                 background-image: -webkit-linear-gradient(top, #4ba614, #008c00);
+                 background-image: -moz-linear-gradient(top, #4ba614, #008c00);
+                 background-image: -ms-linear-gradient(top, #4ba614, #008c00);
+                 background-image: -o-linear-gradient(top, #4ba614, #008c00);
+                 background-image: linear-gradient(to bottom, #4ba614, #008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);
+		}
+		#btn_finish{
+		}
+		#btn_cancel{
+		}
+		input {
+			height: 89%;
+			width: 100%;
+			border-color: lightblue;
+			font-size: 25;	
+			-webkit-border-radius: 5px;
+          	border-radius: 5px;	
+		}
+		#applications{
+		 	height: 100px;
+		 	overflow: auto;
+		}
+	</style>
+	<script>
+		function gatewayCancel(){
+			window.location = '/home';
+		}
+		
+		function gatewaySubmit(){
+			var form = document.createElement('form');
+            form.action = '/admin/login';
+			form.method = 'post'
+            form.id = 'frm';
+			
+			inputs =  document.getElementsByClassName("inputs")
+			for (i = 0; i < inputs.length; i++){
+                form.appendChild(inputs[i]);			
+			}
+			document.body.appendChild(form)
+			document.getElementById('frm').submit();
+		}
+	</script>
+</head>
+
+
+<body>
+    <div id='outer_space'>
+        <div id='top'>
+							<table align="right" height='100%'>
+								<tr height='100%'>
+									<td align='right' id='title'>
+											<%= @title %>: Configuration
+									</td>
+									<td align='right' id='icon'>
+											<%= image_tag(@icon,:class=>"logo")%>	
+									</td>
+								</tr>
+							</table>
+						
+						
+				</div>
+				<div id='middle'>
+						
+							<table align="center"  height='100%' width='98%'>
+								<thead>
+								 <tr valign='top'>
+									<td align='left' id='text' width='40%'>
+											Application Name
+									</td>
+									<td  width='40%'>
+											URL
+									</td>
+								
+									<td align='left' id='text'>
+											Icon Upload
+									</td>
+									<td width='40%'>
+										   Icon
+									</td>
+								</tr>
+								</thead>
+								<tbody id='applications'>
+								<% (@all_app || []).each{|app|%>
+								  <tr valign='top'>
+									<td align='left' id='text'>
+											<input class='inputs' type='text' name='app[<%= app.id%>]["name"]' value='<%= app.application_name -%>'>
+									</td>
+									<td>
+											<input class='inputs' type='text' name='app[<%= app.id%>]["url"]' value='<%= app.url -%>'>
+									</td>
+								
+									<td id='text'>
+											Icon Upload
+									</td>
+									<td >
+										   <%= image_tag(app.icon_link,:class=>"logo")%>
+									</td>
+								</tr>
+								<% }%>
+								</tbody>
+								
+							</table>
+						
+				</div>
+				<div id='bottom'>
+					<button id='btn_cancel' class='buttons'  onmousedown='gatewayCancel()'>Logout </button>
+					<button id='btn_finish' class='buttons' style='float: right;'  onmousedown='gatewaySubmit()'>Save </button>
+					<button id='btn_user' class='buttons' style='float: right;'  onmousedown='window.location="/admin/user_list?user_id=<%= params[:user_id]%>"'>Users </button>
+					
+				</div>
+    </div>
+</body>
+
+

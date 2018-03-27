@@ -1,0 +1,838 @@
+<style>
+
+  body {
+    color: #3465a4;
+    font-size: 24px;
+  }
+
+</style>
+
+<div style="width: 100%; height: 100%; border: none;">
+
+  <div class="table" style="width: 100%; height: 100%; border: none;">
+  
+    <div class="row">
+    
+      <div class="cell" style="height: 100px; border-bottom: 1px solid #3465a4; vertical-align: middle;">
+        
+        <div class="table" style="float: right">
+          <div class="row">
+            <div id="pageTitle" class="cell" style="font-size: 42px; color: #3465a4; text-align: right; vertical-align: middle; padding-right: 20px;">
+              Administration: Users Management
+            </div>
+            <div class="cell" style="font-size: 42px; color: #3465a4; text-align: right; vertical-align: middle; padding-right: 20px;">
+              <img id="pageIcon" src="/images/settings.png" alt="G.O.M" height="70" />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    
+    </div>
+  
+    <div class="row">
+    
+      <div class="cell" style="padding: 10px;">
+          
+          
+          <div id="content" class="table" style="width: 100%;">
+          
+            <div class="row">
+            
+              <div class="cell">
+              
+                <div class="table" style="width: 100%; border-spacing: 20px; color: black;">
+                
+                  <div class="row">
+                  
+                    <div class="cell" style="width: 30%; text-align: center;">
+                    
+                      First Name
+                    
+                    </div>
+                  
+                    <div class="cell" style="width: 30%; text-align: center;">
+                    
+                      Last Name
+                    
+                    </div>
+                  
+                    <div class="cell" style="width: 12%; text-align: center;">
+                    
+                      Username
+                    
+                    </div>
+                  
+                    <div class="cell" style="width: 12%; text-align: center;">
+                    
+                      Role
+                    
+                    </div>
+                  
+                    <div class="cell" style="width: 100px; text-align: center;">
+                    
+                      Status
+                    
+                    </div>
+                  
+                    <div class="cell" style="width: 100px; text-align: center;">
+                    
+                      &nbsp;
+                    
+                    </div>
+                  
+                  </div>
+                
+                </div>
+              
+              </div>
+            
+            </div>
+          
+            
+            <div class="row">
+            
+              <div class="cell">
+              
+                <div  id="links_target" style=" border-top: 1px solid #3465a4; border-bottom: 1px solid #3465a4;  overflow: auto;">
+                  
+                  <div id="appslist" class="table" style="width: 100%; border-spacing: 10px; color: black;">                    
+                
+                  </div>
+                
+                </div>
+              
+              </div>
+            
+            </div>
+          
+          
+          </div>
+          
+          
+			</div>  
+				
+    </div>
+  
+    <div class="row">
+    
+      <div class="cell" style="height: 100px; border-top: 1px solid #3465a4; vertical-align: middle;">
+        
+        <button class='button_red' style="float: left; margin-left: 15px;" onmousedown="if(Object.keys(trackText).length > 0){ if(confirm('Discard unsaved changes?')){window.location='/admin/logout';}} else {window.location='/admin/logout';}">Logout</button>
+					
+				<button class='button_green' style="float: right; margin-right: 15px;" onmousedown="if(Object.keys(trackText).length > 0){ if(confirm('Discard unsaved changes?')){window.location='/';}} else {window.location='/admin/index';}">Finish</button>
+        
+			  <button class='button_blue' style="float: right; margin-right: 8px; font-size: 0.9em;"  onmousedown="if(Object.keys(trackText).length > 0){ if(confirm('Discard unsaved changes?')){window.location='/admin/change_password';}} else {window.location='/admin/change_password';}">Change<br/>Password</button>
+				
+				<% if !@user.role.blank? and @user.role.downcase == "admin" %>
+				
+				  <button id="btnNew" class='button_blue' style="float: right; margin-right: 8px;" onmousedown="addApplication()">New</button>
+        
+        <% end %>
+        
+				<button id="btnLast" class='button_blue' style="float: right; margin-right: 8px;" onmousedown="if(Object.keys(trackText).length > 0){ if(confirm('Discard unsaved changes?')){currentPage = lastpage; ajaxAppsList(currentPage);}} else {currentPage = lastpage; ajaxAppsList(currentPage);}">&rarr;|</button>
+        
+				<button id="btnNext" class='button_blue' style="float: right; margin-right: 8px;" onmousedown="currentPage++; ajaxAppsList(currentPage)">&rarr;</button>
+        
+        <div id="page" style="border: 1px solid #3465a4; width: 140px; height: 50px; 
+                float: right; margin-right: 8px; margin-top: 5px; 
+                text-align: center; vertical-align: middle; padding-top: 20px; 
+                overflow: hidden; border-radius: 10px;"></div>
+        
+				<button id="btnPrev" class='button_blue' style="float: right; margin-right: 8px;" onmousedown="if(Object.keys(trackText).length > 0){ if(confirm('Discard unsaved changes?')){if(currentPage - 1 > 0) currentPage--; ajaxAppsList(currentPage)}} else {if(currentPage - 1 > 0) currentPage--; ajaxAppsList(currentPage)}">&larr;</button>
+        
+				<button id="btnFirst" class='button_blue' style="float: right; margin-right: 8px;" onmousedown="if(Object.keys(trackText).length > 0){ if(confirm('Discard unsaved changes?')){currentPage = 1; ajaxAppsList(currentPage);}} else {currentPage = 1; ajaxAppsList(currentPage);}">|&larr;</button>
+        
+      </div>
+    
+    </div>
+  
+  </div>
+
+</div>
+
+<script>
+<!--
+
+  var trackText = {};
+  var trackTmr;
+
+  var tmr;
+  var currentPage = 1;
+  var total = <%= @total rescue 0 %>;
+  var lastpage = <%= @lastpage rescue 1 %>;
+  var users = <%= @users.to_json %>;
+  var pagesize = <%= @pagesize rescue 6 %>;
+    
+  var imgTick = 'data:image/png;base64,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';
+      
+  var imgUnTick = 'data:image/png;base64,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';
+         
+  function __$(id){
+    return document.getElementById(id);
+  }
+  
+  function track(root, id){
+    clearTimeout(trackTmr);
+    
+    if(__$(root) && trackText[id] != null){
+    
+      if(__$(root).value.trim().toLowerCase() != trackText[id].trim().toLowerCase()){
+      
+        if(__$("void" + id)){
+        
+          __$("void" + id).setAttribute("src", imgTick);
+          
+          __$("void" + id).onmousedown = function(){
+          
+            var appid = this.getAttribute("appid");
+            
+            // ["first_name", "last_name", "username", "role", "status", "void"]
+            var params = {
+              "first_name" : __$("first_name" + appid).value.trim(),
+              "last_name"  : __$("last_name" + appid).value.trim(),
+              "username"  : (__$("username" + appid) ? __$("username" + appid).value.trim() : null),
+              "role"  : (__$("role" + appid) ? __$("role" + appid).value.trim() : null),
+              "status"  : (__$("status" + appid) ? __$("status" + appid).value.trim() : null),
+              "id"   : appid
+            }
+          
+            ajaxUpdateRecord(params, appid);
+          
+          }
+        
+        }
+      
+      }
+    
+    }
+    
+    trackTmr = setTimeout("track('" + root + "', '" + id + "')", 200);
+  }
+  
+  function ajaxUpdateRecord(params, appid){
+    var url = "/admin/update_user";
+    var httpRequest = new XMLHttpRequest();
+    
+    httpRequest.onreadystatechange = function() {
+        handleAjaxUpdateRecord(httpRequest, appid);
+    };
+    try {
+        httpRequest.open("POST", url, true);
+        httpRequest.setRequestHeader("Content-type","application/json;charset=UTF-8");
+        httpRequest.send(JSON.stringify({values: params}));
+    } catch(e){
+    }
+  }
+    
+  function handleAjaxUpdateRecord(aXMLHttpRequest, appid) {
+    if (!aXMLHttpRequest) return;                    
+
+    if (aXMLHttpRequest.readyState == 4 && aXMLHttpRequest.status == 200) {
+                  
+        var result = JSON.parse(aXMLHttpRequest.responseText);
+        
+        if(result["error"]){
+        
+          alert(result["error"]);
+        
+        } else {
+          
+          delete trackText[appid]
+          
+          __$("void" + appid).setAttribute("src", imgUnTick);
+          
+          __$("void" + appid).onmousedown = function(){
+                    
+              if(confirm("Do you really want to delete this entry?")){
+              
+                window.location = "/admin/void_user/" + this.getAttribute("appid");
+              
+              }               
+          
+          }
+          
+          if(String(appid).trim().toLowerCase() == "new"){
+          
+            renameFields(result["success"]);
+          
+          }
+        
+        }
+          
+    }
+  }
+  
+  function ajaxAppsList(page){
+    var url = "/admin/ajax_users_list?page=" + page;
+    
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = function() {
+        handleAjaxRequest(httpRequest);
+    };
+    try {
+        httpRequest.open('GET', url, true);
+        httpRequest.send(null);
+    } catch(e){
+    }    
+  }
+    
+  function handleAjaxRequest(aXMLHttpRequest) {
+    if (!aXMLHttpRequest) return;                    
+
+    if (aXMLHttpRequest.readyState == 4 && aXMLHttpRequest.status == 200) {
+                  
+        var result = aXMLHttpRequest.responseText;
+        
+        users = JSON.parse(result);
+        
+        loadApps();
+    }
+  }
+  
+  function ajaxOperations(url, params){
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = function() {
+        handleAjaxOperations(httpRequest);
+    };
+    try {
+        httpRequest.open("POST", url, true);
+        httpRequest.setRequestHeader("Content-type","application/json;charset=UTF-8");
+        httpRequest.send(JSON.stringify({values: params, page: currentPage}));
+    } catch(e){
+    }
+  }
+    
+  function handleAjaxOperations(aXMLHttpRequest) {
+    if (!aXMLHttpRequest) return;                    
+
+    if (aXMLHttpRequest.readyState == 4 && aXMLHttpRequest.status == 200) {
+                  
+        var result = aXMLHttpRequest.responseText;
+        
+        users = JSON.parse(result);
+        
+        loadApps();
+    }
+  }
+  
+  function loadApps(){
+    __$("appslist").innerHTML = "";
+      
+    __$("page").innerHTML = "Page " + currentPage;
+      
+    if(__$("btnPrev")){
+      
+      if(currentPage == 1){
+      
+        __$("btnPrev").className = "button_gray";
+        
+        __$("btnPrev").onmousedown = function(){};
+      
+      } else {
+      
+        __$("btnPrev").className = "button_blue";
+        
+        __$("btnPrev").onmousedown = function(){
+        
+          if(Object.keys(trackText).length > 0){ 
+          
+            if(confirm('Discard unsaved changes?')){
+            
+              if(currentPage - 1 > 0) currentPage--; 
+              
+              ajaxAppsList(currentPage);
+              
+            }
+            
+          } else {
+          
+              if(currentPage - 1 > 0) currentPage--; 
+              
+              ajaxAppsList(currentPage);
+              
+          }
+        
+        };
+      
+      }       
+    }
+        
+    if(__$("btnNext")){
+      
+      if(users.length < pagesize){
+      
+        __$("btnNext").className = "button_gray";
+        
+        __$("btnNext").onmousedown = function(){};
+      
+      } else {
+      
+        __$("btnNext").className = "button_blue";
+        
+        __$("btnNext").onmousedown = function(){
+        
+          if(Object.keys(trackText).length > 0){ 
+          
+            if(confirm('Discard unsaved changes?')){
+            
+              currentPage++; 
+          
+              ajaxAppsList(currentPage);
+              
+            }
+            
+          } else {
+          
+              currentPage++; 
+          
+              ajaxAppsList(currentPage);
+              
+          }
+        
+        };
+      
+      }       
+    }
+        
+    for(var i = 0; i < users.length; i++){
+      
+      var row = document.createElement("div");
+      row.className = "row";
+      
+      __$("appslist").appendChild(row);
+      
+      var cells = ["30%", "30%", "12%", "12%", "100px", "100px"];      
+      
+      var fields = ["first_name", "last_name", "username", "role", "status", "void"];
+      
+      for(var j = 0; j < fields.length; j++){
+        
+        var cell = document.createElement("div");
+        cell.className = "cell";
+        cell.style.verticalAlign = "middle";
+        cell.style.textAlign = "center";
+        
+        if(cells[j].length > 0) cell.style.width = cells[j];
+        
+        row.appendChild(cell);
+        
+        if(fields[j] == "void"){
+                      
+            var img = document.createElement("img");
+            img.setAttribute("src", imgUnTick);
+            img.setAttribute("height", "60");
+            img.style.marginTop = "10px";
+            img.style.cursor = "pointer";
+            img.id = "void" + users[i]["id"];
+            
+            img.ondragstart = function() { return false; };
+            
+            img.setAttribute("appid", users[i]["id"]);
+            
+            img.onmousedown = function(){
+              
+              if(confirm("Do you really want to delete this entry?")){
+              
+                window.location = "/admin/void_user/" + this.getAttribute("appid");
+              
+              } 
+              
+            }
+            
+            cell.appendChild(img);
+            
+        } else if(fields[j] == "role"){
+          
+          <% if !@user.role.blank? %>  
+                        
+            <% if @user.role.downcase.strip == "admin" %>  
+            
+              var select = document.createElement("select");
+              select.id = fields[j] + users[i]["id"];
+              select.className = "input_cell"; 
+              select.setAttribute("appid", users[i]["id"]);
+              
+              select.onmousedown = function(){
+               
+                var appid = this.getAttribute("appid");
+               
+                if(trackText[appid] == null){
+                
+                  clearTimeout(trackTmr);
+                
+                  trackText[appid] = this.value.trim();
+                
+                  track(String(this.id), String(appid));
+                
+                }
+               
+              }
+              
+              cell.appendChild(select);
+              
+              var opts = ["", "REGULAR", "ADMIN"];
+              
+              for(var k = 0; k < opts.length; k++){
+              
+                var opt = document.createElement("option");
+                opt.innerHTML = opts[k];
+                
+                if(users[i][fields[j]] != null && users[i][fields[j]].toLowerCase() == opts[k].toLowerCase()){
+                
+                  opt.setAttribute("selected", true);
+                
+                }
+                
+                select.appendChild(opt);
+              
+              }
+            
+            <% else %>
+            
+              cell.innerHTML = "<%= @user.role %>";
+            
+            <% end %>
+                    
+          <% else %>
+          
+            cell.innerHTML = "<%= @user.role %>";
+          
+          <% end %>
+          
+        } else if(fields[j] == "status"){
+          
+          <% if !@user.role.blank? %>  
+                        
+            <% if @user.role.downcase.strip == "admin" %>  
+            
+              var select = document.createElement("select");
+              select.id = fields[j] + users[i]["id"];
+              select.className = "input_cell";
+              select.setAttribute("appid", users[i]["id"]);
+              
+              select.onmousedown = function(){
+               
+                var appid = this.getAttribute("appid");
+               
+                if(trackText[appid] == null){
+                
+                  clearTimeout(trackTmr);
+                
+                  trackText[appid] = this.value.trim();
+                
+                  track(String(this.id), String(appid));
+                
+                }
+               
+              }
+              
+              cell.appendChild(select);
+              
+              var opts = ["", "ACTIVE", "BLOCKED"];
+              
+              for(var k = 0; k < opts.length; k++){
+              
+                var opt = document.createElement("option");
+                opt.innerHTML = opts[k];
+                
+                if(users[i][fields[j]] != null && users[i][fields[j]].toLowerCase() == opts[k].toLowerCase()){
+                
+                  opt.setAttribute("selected", true);
+                
+                }
+                
+                select.appendChild(opt);
+              
+              }
+            
+            <% else %>
+            
+              cell.innerHTML = "<%= @user.user_status %>";
+            
+            <% end %>
+                    
+          <% else %>
+          
+            cell.innerHTML = "<%= @user.user_status %>";
+          
+          <% end %>
+          
+        } else if(fields[j] == "username"){
+        
+            cell.innerHTML = users[i][fields[j]];
+          
+        } else {
+          
+          var input = document.createElement("input");
+          input.type = "input";
+          input.className = "input_cell";
+          input.style.width = "90%";
+          input.id = fields[j] + users[i]["id"];
+          input.value = users[i][fields[j]];          
+          input.setAttribute("appid", users[i]["id"]);
+          
+          input.onmousedown = function(){
+           
+            var appid = this.getAttribute("appid");
+           
+            if(trackText[appid] == null){
+            
+              clearTimeout(trackTmr);
+            
+              trackText[appid] = this.value.trim();
+            
+              track(String(this.id), String(appid));
+            
+            }
+           
+            showKeyboard(this);
+            
+          }
+          
+          cell.appendChild(input);
+          
+        }
+        
+      }
+      
+    }
+  }
+  
+  function addApplication(){    
+    
+      __$("btnNew").className = "button_gray";
+      
+      __$("btnNew").onmousedown = function(){}
+    
+      var row = document.createElement("div");
+      row.className = "row";
+      row.id = "newRow";
+      
+      __$("appslist").appendChild(row);
+      
+      var cells = ["30%", "30%", "12%", "12%", "100px", "100px"];      
+      
+      var fields = ["first_name", "last_name", "username", "role", "status", "void"];
+      
+      var appid = "new";
+      
+      for(var j = 0; j < fields.length; j++){
+        
+        var cell = document.createElement("div");
+        cell.className = "cell";
+        cell.style.verticalAlign = "middle";
+        cell.style.textAlign = "center";
+        cell.id = "parent" + fields[j] + appid;
+        
+        if(cells[j].length > 0) cell.style.width = cells[j];
+        
+        row.appendChild(cell);
+        
+        if(fields[j] == "void"){
+                      
+            var img = document.createElement("img");
+            img.setAttribute("src", imgUnTick);
+            img.setAttribute("height", "60");
+            img.style.marginTop = "10px";
+            img.style.cursor = "pointer";
+            img.id = "void" + appid;
+            
+            img.ondragstart = function() { return false; };
+            
+            img.setAttribute("appid", appid);
+            
+            img.onmousedown = function(){
+              
+              if(confirm("Do you really want to delete this entry?")){
+              
+                __$("appslist").removeChild(__$("newRow"));
+                                             
+                __$("btnNew").className = "button_blue";
+                
+                __$("btnNew").onmousedown = function(){
+                    
+                    addApplication();
+                    
+                  }  
+              
+              } 
+              
+            }
+            
+            cell.appendChild(img);
+        
+        } else if(fields[j] == "role"){
+          
+            var select = document.createElement("select");
+            select.id = fields[j] + appid;
+            select.className = "input_cell"; 
+            select.setAttribute("appid", appid);
+            
+            select.onmousedown = function(){
+             
+              var appid = this.getAttribute("appid");
+             
+              if(trackText[appid] == null){
+              
+                clearTimeout(trackTmr);
+              
+                trackText[appid] = this.value.trim();
+              
+                track(String(this.id), String(appid));
+              
+              }
+             
+            }
+            
+            cell.appendChild(select);
+            
+            var opts = ["", "REGULAR", "ADMIN"];
+            
+            for(var k = 0; k < opts.length; k++){
+            
+              var opt = document.createElement("option");
+              opt.innerHTML = opts[k];
+              
+              select.appendChild(opt);
+            
+            }
+            
+        } else if(fields[j] == "status"){
+          
+            var select = document.createElement("select");
+            select.id = fields[j] + appid;
+            select.className = "input_cell";
+            select.setAttribute("appid", appid);
+            
+            select.onmousedown = function(){
+             
+              var appid = this.getAttribute("appid");
+             
+              if(trackText[appid] == null){
+              
+                clearTimeout(trackTmr);
+              
+                trackText[appid] = this.value.trim();
+              
+                track(String(this.id), String(appid));
+              
+              }
+             
+            }
+            
+            cell.appendChild(select);
+            
+            var opts = ["", "ACTIVE", "BLOCKED"];
+            
+            for(var k = 0; k < opts.length; k++){
+            
+              var opt = document.createElement("option");
+              opt.innerHTML = opts[k];
+              
+              select.appendChild(opt);
+            
+            }
+            
+        } else {
+          
+          var input = document.createElement("input");
+          input.type = "input";
+          input.className = "input_cell";
+          input.style.width = "90%";
+          input.id = fields[j] + appid;
+          input.value = "";          
+          input.setAttribute("appid", appid);
+          
+          input.onmousedown = function(){
+           
+            var iappid = this.getAttribute("appid");
+           
+            if(trackText[iappid] == null){
+            
+              clearTimeout(trackTmr);
+            
+              trackText[iappid] = this.value.trim();
+            
+              track(String(this.id), String(iappid));
+            
+            }
+           
+            showKeyboard(this);
+            
+          }
+          
+          cell.appendChild(input);
+          
+        }
+        
+      }
+            
+  }
+  
+  function renameFields(newid){
+  
+    total++;
+    
+    lastpage = Math.ceil(total / pagesize);
+  
+    var fields = ["first_name", "last_name", "username", "role", "status", "void"];
+    
+    for(var i = 0; i < fields.length; i++){
+    
+      if(__$(fields[i] + "new")){
+     
+        if(__$("parent" + fields[i] + "new") && fields[i] == "username"){
+        
+          var value = __$(fields[i] + "new").value;
+          
+          __$("parent" + fields[i] + "new").innerHTML = value;
+        
+        } else {
+       
+           __$(fields[i] + "new").setAttribute("appid", newid);
+          
+           __$(fields[i] + "new").setAttribute("id", fields[i] + newid);
+           
+        }
+         
+      }
+    
+      if(__$("parent" + fields[i] + "new")){
+      
+        __$("parent" + fields[i] + "new").removeAttribute("id");
+      
+      }
+    
+    }
+  
+    __$("btnNew").className = "button_blue";
+    
+    __$("btnNew").onmousedown = function(){
+        
+        addApplication();
+        
+      }
+  
+  }
+  
+  function resizeButtons(){
+    clearTimeout(tmr);
+    
+    if(__$("links_target")){
+    
+      __$("links_target").style.height = (window.innerHeight - 320) + "px";
+    
+    }
+    
+    tmr = setTimeout("resizeButtons()", 200)
+  }
+                    
+  tmr = setTimeout("resizeButtons()", 200)
+  
+  loadApps();
+  
+//-->
+
+</script>
+

@@ -1,0 +1,129 @@
+<style>
+
+  body {
+    color: #3465a4;
+    font-size: 24px;
+  }
+  
+</style>
+
+<div style="width: 100%; height: 100%; border: none;">
+
+  <div class="table" style="width: 100%; height: 100%; border: none;">
+  
+    <div class="row">
+    
+      <div class="cell" style="height: 100px; border-bottom: 1px solid #3465a4; vertical-align: middle;">
+        
+        <div class="table" style="float: right">
+          <div class="row">
+            <div id="pageTitle" class="cell" style="font-size: 42px; color: #3465a4; text-align: right; vertical-align: middle; padding-right: 20px;">
+              Administration: Login
+            </div>
+            <div class="cell" style="font-size: 42px; color: #3465a4; text-align: right; vertical-align: middle; padding-right: 20px;">
+              <img id="pageIcon" src="/images/settings.png" alt="G.O.M" height="70" />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    
+    </div>
+  
+    <div class="row">
+    
+      <div id="content" class="cell" style="">
+          
+        <%= form_tag("/admin/dologin", :method => :post, :autocomplete => :off) do %>
+                 
+          <div style="margin: auto; margin-top: 60px; border: 1px solid #000; width: 500px; padding: 40px; border: 1px solid #3465a4; border-radius: 20px;">        
+						  <div class="table" style="border-spacing: 20px;">						
+							    <div class="row">
+							      <div id="lblusername" class="cell" style="color: black;">
+								        Username
+								    </div>
+							      <div class="cell">
+								        <input class='input_cell' type='text' name='username' id="username" onmousedown="showKeyboard(this);" onkeydown="if(event.key == 'Enter') __$('password').focus();">
+								    </div>
+							    </div>							
+							    <div class="row">
+						        <div id="lblpassword" class="cell" style="color: black;">
+								        Password
+								    </div>
+								    <div class="cell">
+								        <input class='input_cell' type='password' name='password' id="password" onmousedown="showKeyboard(this);" onkeydown="if(event.key == 'Enter') validateForm();">
+								    </div>
+							    </div>							
+						  </div>						
+				  </div>
+					
+				<% end %>
+					
+			</div>  
+				
+    </div>
+  
+    <div class="row">
+    
+      <div class="cell" style="height: 100px; border-top: 1px solid #3465a4; vertical-align: middle;">
+        
+        <button class='button_red' style="float: left; margin-left: 15px;" onmousedown="window.location='/';">Cancel</button>
+					
+				<button class='button_green' style="float: right; margin-right: 15px;" onclick="validateForm()">Login</button>
+        
+      </div>
+    
+    </div>
+  
+  </div>
+
+</div>
+
+<script>
+<!--
+
+  function __$(id){
+    return document.getElementById(id);
+  }
+
+  function validateForm(){
+    
+    if(__$("username").value.trim().length == 0){
+      __$("username").className = "error_input";
+      
+      if(__$("lblusername")){
+        __$("lblusername").className = "cell error_text";
+      }
+      
+      return;
+    } else {
+      __$("username").className = "input_cell";
+      
+      if(__$("lblusername")){
+        __$("lblusername").className = "cell";
+      }      
+    }
+    
+    if(__$("password").value.trim().length == 0){
+      __$("password").className = "error_input";
+      
+      if(__$("lblpassword")){
+        __$("lblpassword").className = "cell error_text";
+      }
+      
+      return;
+    } else {
+      __$("password").className = "input_cell";
+      
+      if(__$("lblpassword")){
+        __$("lblpassword").className = "cell";
+      }      
+    }
+    
+    document.forms[0].submit();
+  }
+
+//-->
+
+</script>
+

@@ -1,0 +1,333 @@
+<style>
+
+  body {
+    color: #3465a4;
+    font-size: 24px;
+  }
+
+  .empty {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width: 180px;
+    height: 150px;
+    float: left;
+    margin: 10px;
+  }
+
+  .button {
+    border: 1px solid #3465a4;
+    border-radius: 15px;
+    width: 180px;
+    height: 150px;
+    float: left;
+    margin: 10px;
+    cursor: pointer;
+    vertical-align: middle; 
+    text-align: center;
+  }
+
+  .button:hover {
+    background-color: #c2d3f4;
+    color: #0e2a64;
+    text-decoration: underline;
+  }
+
+  .button:active {
+    background-color: #f3e7c0;
+  }
+
+  #pageTitle:hover {
+    color: #999 !important;
+  }
+
+</style>
+<div style="width: 100%; height: 100%; border: none;">
+
+  <div class="table" style="width: 100%; height: 100%; border: none;">
+  
+    <div class="row">
+    
+      <div class="cell" style="height: 100px; border-bottom: 1px solid #3465a4; vertical-align: middle;">
+        
+        <div class="table" style="float: right">
+          <div class="row">
+            <div id="pageTitle" class="cell" style="font-size: 42px; color: #3465a4; text-align: right; vertical-align: middle; padding-right: 20px; cursor: pointer;" onclick="window.location='/admin/index'">
+              <%= @site %>
+            </div>
+            <div class="cell" style="font-size: 42px; color: #3465a4; text-align: right; vertical-align: middle; padding-right: 20px;">
+              <img id="pageIcon" src="/images/coa.png" alt="G.O.M" height="70" />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    
+    </div>
+  
+    <div class="row">
+    
+      <div id="links_parent" class="cell" style="">
+        
+        <div id="links" style="height: 100%; border: none; overflow: auto;">
+        
+          <div class="table" style="margin: auto; margin-top: 40px;">
+          
+            <div class="row">
+              <div class="cell">
+                <div id="btn0" class="button">
+                </div>
+              
+                <div id="btn1" class="button">
+                </div>
+              
+                <div id="btn2" class="button">
+                </div>
+              
+                <div id="btn3" class="button">
+                </div>
+              </div>
+            </div>
+          
+            <div class="row">
+              <div class="cell">
+                <div id="btn4" class="button">
+                </div>
+              
+                <div id="btn5" class="button">
+                </div>
+              
+                <div id="btn6" class="button">
+                </div>
+              
+                <div id="btn7" class="button">
+                </div>
+              </div>
+            </div>
+          
+            <div class="row">
+              <div class="cell">
+                <div id="btn8" class="button">
+                </div>
+              
+                <div id="btn9" class="button">
+                </div>
+              
+                <div id="btn10" class="button">
+                </div>
+              
+                <div id="btn11" class="button">
+                </div>
+              </div>
+            </div>
+          
+            <!--div class="row">
+              <div class="cell" style="padding-top: 10px;">
+                <div class="button" style="float: none; margin: auto; vertical-align: middle; text-align: center;" onclick="window.location='/admin/index'">
+                  <img src="/images/settings.png" height="80" alt="Admin" style="margin: 10px;" />
+                  <div style="margin: auto; width: 170px; overflow: hidden;">
+                    Administration
+                  </div>
+                </div>
+              </div>
+            </div-->
+            
+          </div>
+        
+        </div>
+        
+      </div>
+    
+    </div>
+  
+    <div class="row">
+    
+      <div class="cell" style="height: 50px; border-top: 1px solid #3465a4; vertical-align: middle;">
+        
+        <div style="font-size: 22px; color: #3465a4; padding-left: 15px; float: left; vertical-align: middle; margin-top: 10px;">
+          Applications Portal
+        </div>
+        
+        <div style="font-size: 22px; color: #3465a4; padding-right: 15px; float: right;">
+          <img id="pageIcon" src="/images/baobab.png" alt="BHT" height="40" />
+        </div>
+        
+      </div>
+    
+    </div>
+  
+  </div>
+
+</div>
+
+<script>
+  <!--
+  var tmr;
+  var currentPage = 1;
+  
+  function __$(id){
+    return document.getElementById(id);
+  }
+      
+  function resizeButtons(){
+    clearTimeout(tmr);
+    
+    if(__$("links_parent")){
+    
+      __$("links").style.height = (window.innerHeight - 174) + "px";
+    
+    }
+    
+    tmr = setTimeout("resizeButtons()", 200)
+  }
+  
+  
+  function ajaxLogApp(id, path){
+     
+     var url = "/home/log_app/" + id;
+     
+     var httpRequest = new XMLHttpRequest();
+      httpRequest.onreadystatechange = function() {
+          handleLogApp(httpRequest, path);
+      };
+      try {
+          httpRequest.open('GET', url, true);
+          httpRequest.send(null);
+      } catch(e){
+      }
+  }
+
+  function handleLogApp(aXMLHttpRequest, path) {
+    if (!aXMLHttpRequest) return;                    
+
+    if (aXMLHttpRequest.readyState == 4 && (aXMLHttpRequest.status == 200 || 
+          aXMLHttpRequest.status == 304)) {
+           
+      window.location = path;
+      
+    }
+  }
+  
+  function ajaxButtons(page){
+     
+     var url = "/home/ajax_links?page=" + page;
+     
+     var httpRequest = new XMLHttpRequest();
+      httpRequest.onreadystatechange = function() {
+          handleTasks(httpRequest);
+      };
+      try {
+          httpRequest.open('GET', url, true);
+          httpRequest.send(null);
+      } catch(e){
+      }
+  }
+
+  function handleTasks(aXMLHttpRequest) {
+    if (!aXMLHttpRequest) return;                    
+
+    if (aXMLHttpRequest.readyState == 4 && (aXMLHttpRequest.status == 200 || 
+          aXMLHttpRequest.status == 304)) {
+                 
+      try{
+        var result = JSON.parse(aXMLHttpRequest.responseText);
+              
+        loadButtons(result);
+              
+      } catch(e){}
+    }
+  }       
+   
+  function loadButtons(result){
+    var order = [1,2,0,3,5,6,4,7,9,10,8,11];
+    
+    var keys = Object.keys(result);
+    
+    for(var k = 0; k < keys.length; k++){
+      if(__$("btn" + order[k])){
+      
+        __$("btn" + order[k]).setAttribute("class", "empty");
+        __$("btn" + order[k]).removeAttribute("onclick");
+        __$("btn" + order[k]).innerHTML = "";
+        __$("btn" + order[k]).style.fontSize = "1em";
+      
+        var img = document.createElement("img");
+        img.setAttribute("src", "/data/" + result[keys[k]][1]);
+        img.setAttribute("height", "80");
+        img.style.margin = "10px";
+        img.setAttribute("alt", "");
+        
+        __$("btn" + order[k]).appendChild(img);
+        
+        var div = document.createElement("div");
+        div.style.margin = "auto";
+        div.style.width = "170px";
+        div.style.height = "30px";
+        div.style.overflow = "hidden";
+        div.innerHTML = keys[k];
+        
+        __$("btn" + order[k]).appendChild(div);
+      
+        __$("btn" + order[k]).setAttribute("class", "button");
+        
+        __$("btn" + order[k]).setAttribute("link", result[keys[k]][0]);
+        
+        __$("btn" + order[k]).setAttribute("appid", result[keys[k]][2]);
+        
+        __$("btn" + order[k]).onclick = function(){
+        
+          ajaxLogApp(this.getAttribute("appid"), this.getAttribute("link"));
+          
+        }
+        
+      }
+    }
+    
+    for(var i = keys.length; i < 12; i++){
+      if(__$("btn" + order[i])){
+        __$("btn" + order[i]).setAttribute("class", "empty");
+        __$("btn" + order[i]).removeAttribute("onclick");
+        __$("btn" + order[i]).innerHTML = "&nbsp;";
+      }
+    }
+    
+    if((currentPage == 1 && keys.length == 11) || (currentPage > 1 && keys.length == 10)){
+      
+      if(__$("btn11")){
+        
+        __$("btn11").className = "button";
+        __$("btn11").style.fontSize = "2.5em";
+        __$("btn11").innerHTML = "<div style='margin-top: 35px'>Next</div>";
+        __$("btn11").onclick = function(){
+          currentPage += 1;
+          
+          ajaxButtons(currentPage);
+        }
+        
+      } 
+      
+    }
+    
+    if(currentPage > 1){
+      
+      if(__$("btn8")){
+        
+        __$("btn8").className = "button";
+        __$("btn8").style.fontSize = "2.5em";
+        __$("btn8").innerHTML = "<div style='margin-top: 35px'>Back</div>";
+        __$("btn8").onclick = function(){
+          currentPage -= 1;
+          
+          ajaxButtons(currentPage);
+        }
+        
+      } 
+      
+    }
+  }
+                     
+  resizeButtons();
+  
+  ajaxButtons(currentPage);
+  
+  //-->
+</script>

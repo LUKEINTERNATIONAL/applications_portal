@@ -1,0 +1,1225 @@
+[ N 2018-03-20 12:35:03.5291 8591/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 12:35:03.5609 8594/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 12:35:03.5613 8594/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 12:35:03.6714 8594/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 8594
+App 8633 stdout: 
+App 8633 stdout: 
+[ E 2018-03-20 12:35:07.0074 8594/Ti age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /var/www/portal: An error occurred while starting up the preloader.
+  Error ID: 0dd620fe
+  Error details saved to: /tmp/passenger-error.h69gJr
+  Message from application: uninitialized constant ActionController::Routing (NameError)
+  /var/www/portal/config/routes.rb:1:in `<top (required)>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:16:in `reload!'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `call'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `execute'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:27:in `updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/finisher.rb:69:in `block in <module:Finisher>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `instance_exec'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `run'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:226:in `block in tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:348:in `block (2 levels) in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:427:in `each_strongly_connected_component_from'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:347:in `block in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `call'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:224:in `tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:205:in `tsort_each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:54:in `run_initializers'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application.rb:352:in `initialize!'
+  /var/www/portal/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `instance_eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `preload_app'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:156:in `<module:App>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+
+
+[ E 2018-03-20 12:35:07.0291 8594/T7 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 0dd620fe. Please see earlier logs for details about the error.
+[ N 2018-03-20 12:35:10.7611 8594/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-20 12:37:44.9563 8594/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 12:37:44.9563 8594/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 12:37:44.9564 8594/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 12:37:44.9564 8594/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 12:37:44.9565 8594/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 12:37:44.9565 8594/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 12:37:44.9566 8594/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 12:37:44.9566 8594/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 12:37:44.9566 8594/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 12:37:44.9566 8594/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 12:37:44.9566 8594/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 12:37:44.9566 8594/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 12:37:45.0111 8594/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 12:37:47.2733 8738/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 12:37:47.2839 8741/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 12:37:47.2840 8741/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 12:37:47.2909 8741/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 8741
+App 8780 stdout: 
+App 8780 stdout: 
+[ E 2018-03-20 12:37:50.4373 8741/Ti age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /var/www/portal: An error occurred while starting up the preloader.
+  Error ID: ac5f8f9f
+  Error details saved to: /tmp/passenger-error.z2Ms8H
+  Message from application: You are using the old router DSL which has been removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/ (RuntimeError)
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:416:in `eval_block'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:401:in `draw'
+  /var/www/portal/config/routes.rb:1:in `<top (required)>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:16:in `reload!'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `call'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `execute'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:27:in `updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/finisher.rb:69:in `block in <module:Finisher>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `instance_exec'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `run'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:226:in `block in tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:348:in `block (2 levels) in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:427:in `each_strongly_connected_component_from'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:347:in `block in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `call'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:224:in `tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:205:in `tsort_each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:54:in `run_initializers'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application.rb:352:in `initialize!'
+  /var/www/portal/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `instance_eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `preload_app'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:156:in `<module:App>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+
+
+[ E 2018-03-20 12:37:50.4440 8741/T6 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is ac5f8f9f. Please see earlier logs for details about the error.
+[ N 2018-03-20 12:37:50.6995 8741/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-20 13:13:10.9686 8741/T6 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 13:13:10.9686 8741/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 13:13:10.9687 8741/T6 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 13:13:10.9687 8741/T6 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 13:13:10.9687 8741/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 13:13:10.9688 8741/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 13:13:10.9688 8741/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 13:13:10.9689 8741/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 13:13:10.9689 8741/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 13:13:10.9689 8741/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 13:13:10.9689 8741/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 13:13:10.9689 8741/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 13:13:11.0229 8741/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 13:13:13.3513 9918/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 13:13:13.3620 9921/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 13:13:13.3621 9921/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 13:13:13.3691 9921/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 9921
+App 9960 stdout: 
+App 9960 stdout: 
+[ E 2018-03-20 13:13:16.5162 9921/Ti age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /var/www/portal: An error occurred while starting up the preloader.
+  Error ID: f3b92309
+  Error details saved to: /tmp/passenger-error.f22to9
+  Message from application: You are using the old router DSL which has been removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/ (RuntimeError)
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:416:in `eval_block'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:401:in `draw'
+  /var/www/portal/config/routes.rb:1:in `<top (required)>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:16:in `reload!'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `call'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `execute'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:27:in `updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/finisher.rb:69:in `block in <module:Finisher>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `instance_exec'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `run'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:226:in `block in tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:348:in `block (2 levels) in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:427:in `each_strongly_connected_component_from'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:347:in `block in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `call'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:224:in `tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:205:in `tsort_each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:54:in `run_initializers'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application.rb:352:in `initialize!'
+  /var/www/portal/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `instance_eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `preload_app'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:156:in `<module:App>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+
+
+[ E 2018-03-20 13:13:16.5231 9921/T6 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is f3b92309. Please see earlier logs for details about the error.
+[ N 2018-03-20 13:13:16.9853 9921/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-20 13:13:27.4096 9921/T6 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 13:13:27.4096 9921/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 13:13:27.4096 9921/T6 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 13:13:27.4097 9921/T6 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 13:13:27.4097 9921/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 13:13:27.4097 9921/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 13:13:27.4097 9921/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 13:13:27.4097 9921/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 13:13:27.4097 9921/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 13:13:27.4097 9921/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 13:13:27.4097 9921/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 13:13:27.4097 9921/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 13:13:27.4623 9921/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 13:14:24.5229 10027/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 13:14:24.5336 10030/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 13:14:24.5337 10030/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 13:14:24.5406 10030/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 10030
+App 10069 stdout: 
+App 10069 stdout: 
+[ E 2018-03-20 13:14:27.6807 10030/Ti age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /var/www/portal: An error occurred while starting up the preloader.
+  Error ID: 31fef8ca
+  Error details saved to: /tmp/passenger-error.P2AsZC
+  Message from application: You are using the old router DSL which has been removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/ (RuntimeError)
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:416:in `eval_block'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:401:in `draw'
+  /var/www/portal/config/routes.rb:1:in `<top (required)>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:16:in `reload!'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `call'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `execute'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:27:in `updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/finisher.rb:69:in `block in <module:Finisher>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `instance_exec'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `run'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:226:in `block in tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:348:in `block (2 levels) in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:427:in `each_strongly_connected_component_from'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:347:in `block in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `call'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:224:in `tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:205:in `tsort_each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:54:in `run_initializers'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application.rb:352:in `initialize!'
+  /var/www/portal/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `instance_eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `preload_app'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:156:in `<module:App>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+
+
+[ E 2018-03-20 13:14:27.6876 10030/T7 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 31fef8ca. Please see earlier logs for details about the error.
+[ N 2018-03-20 13:14:27.9177 10030/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-20 13:17:09.3793 10030/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 13:17:09.3793 10030/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 13:17:09.3794 10030/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 13:17:09.3794 10030/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 13:17:09.3794 10030/Tc Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 13:17:09.3794 10030/Tc Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 13:17:09.3795 10030/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 13:17:09.3795 10030/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 13:17:09.3795 10030/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 13:17:09.3795 10030/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 13:17:09.3795 10030/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 13:17:09.3795 10030/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 13:17:09.4326 10030/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 13:17:11.6369 10156/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 13:17:11.6475 10159/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 13:17:11.6476 10159/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 13:17:11.6546 10159/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 10159
+App 10198 stdout: 
+App 10214 stdout: 
+[ N 2018-03-20 13:17:21.1968 10159/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 10240 stdout: 
+App 10247 stdout: 
+
+[ N 2018-03-20 13:20:23.1732 10159/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 13:20:23.1733 10159/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 13:20:23.1734 10159/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10214, application /var/www/portal (development)
+[ N 2018-03-20 13:20:23.1735 10159/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10240, application /var/www/portal (development)
+[ N 2018-03-20 13:20:23.1736 10159/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10247, application /var/www/portal (development)
+[ N 2018-03-20 13:20:23.1737 10159/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 13:20:23.1737 10159/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 13:20:23.1737 10159/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 13:20:23.1737 10159/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 13:20:23.1737 10159/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 13:20:23.1738 10159/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 13:20:23.1738 10159/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 13:20:23.1738 10159/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 13:20:23.1740 10159/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 13:20:23.1740 10159/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 13:20:23.1740 10159/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10214, application /var/www/portal (development)
+[ N 2018-03-20 13:20:23.1741 10159/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10240, application /var/www/portal (development)
+[ N 2018-03-20 13:20:23.1741 10159/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10247, application /var/www/portal (development)
+[ N 2018-03-20 13:20:23.4398 10159/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 13:20:32.2825 10389/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 13:20:32.2932 10392/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 13:20:32.2933 10392/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 13:20:32.3008 10392/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 10392
+App 10431 stdout: 
+App 10447 stdout: 
+[ N 2018-03-20 13:20:37.7988 10392/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 10460 stdout: 
+
+[ N 2018-03-20 13:21:49.1447 10392/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 13:21:49.1447 10392/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 13:21:49.1448 10392/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10447, application /var/www/portal (development)
+[ N 2018-03-20 13:21:49.1448 10392/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10460, application /var/www/portal (development)
+[ N 2018-03-20 13:21:49.1448 10392/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 13:21:49.1448 10392/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 13:21:49.1449 10392/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 13:21:49.1449 10392/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 13:21:49.1449 10392/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 13:21:49.1449 10392/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 13:21:49.1450 10392/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 13:21:49.1450 10392/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 13:21:49.1450 10392/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 13:21:49.1450 10392/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 13:21:49.1450 10392/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10447, application /var/www/portal (development)
+[ N 2018-03-20 13:21:49.1451 10392/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10460, application /var/www/portal (development)
+[ N 2018-03-20 13:21:49.4152 10392/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 13:24:35.8441 10581/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 13:24:35.8547 10584/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 13:24:35.8547 10584/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 13:24:35.8617 10584/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 10584
+App 10624 stdout: 
+App 10641 stdout: 
+App 10652 stdout: 
+[ N 2018-03-20 13:24:42.2807 10584/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 10660 stdout: 
+
+[ N 2018-03-20 13:27:15.2727 10584/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 13:27:15.2728 10584/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 13:27:15.2729 10584/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10641, application /var/www/portal (development)
+[ N 2018-03-20 13:27:15.2731 10584/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10652, application /var/www/portal (development)
+[ N 2018-03-20 13:27:15.2732 10584/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10660, application /var/www/portal (development)
+[ N 2018-03-20 13:27:15.2733 10584/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 13:27:15.2734 10584/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 13:27:15.2734 10584/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 13:27:15.2735 10584/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 13:27:15.2735 10584/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 13:27:15.2735 10584/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 13:27:15.2736 10584/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 13:27:15.2736 10584/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 13:27:15.2739 10584/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 13:27:15.2739 10584/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 13:27:15.2740 10584/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10641, application /var/www/portal (development)
+[ N 2018-03-20 13:27:15.2741 10584/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10652, application /var/www/portal (development)
+[ N 2018-03-20 13:27:15.2742 10584/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10660, application /var/www/portal (development)
+[ N 2018-03-20 13:27:15.5392 10584/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 13:48:53.7444 11111/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 13:48:53.7550 11114/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 13:48:53.7551 11114/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 13:48:53.7621 11114/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 11114
+App 11153 stdout: 
+App 11169 stdout: 
+App 11184 stdout: 
+[ N 2018-03-20 13:49:05.7824 11114/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 11198 stdout: 
+
+[ N 2018-03-20 13:49:52.3665 11114/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 13:49:52.3665 11114/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 13:49:52.3666 11114/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 11169, application /var/www/portal (development)
+[ N 2018-03-20 13:49:52.3667 11114/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 11184, application /var/www/portal (development)
+[ N 2018-03-20 13:49:52.3667 11114/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 11198, application /var/www/portal (development)
+[ N 2018-03-20 13:49:52.3668 11114/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 13:49:52.3668 11114/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 13:49:52.3669 11114/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 13:49:52.3669 11114/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 13:49:52.3670 11114/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 13:49:52.3670 11114/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 13:49:52.3670 11114/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 13:49:52.3671 11114/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 13:49:52.3672 11114/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 13:49:52.3672 11114/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 13:49:52.3673 11114/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 11169, application /var/www/portal (development)
+[ N 2018-03-20 13:49:52.3674 11114/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 11184, application /var/www/portal (development)
+[ N 2018-03-20 13:49:52.3675 11114/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 11198, application /var/www/portal (development)
+[ N 2018-03-20 13:49:52.6338 11114/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 13:49:59.8423 11259/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 13:49:59.8529 11262/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 13:49:59.8530 11262/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 13:49:59.8600 11262/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 11262
+App 11301 stdout: 
+App 11318 stdout: 
+App 11330 stdout: 
+[ N 2018-03-20 13:50:06.0857 11262/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+[ N 2018-03-20 13:55:05.1827 11262/T3 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 11330, application /var/www/portal (development)
+
+[ N 2018-03-20 13:57:51.8235 11262/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 13:57:51.8236 11262/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 13:57:51.8236 11262/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 11318, application /var/www/portal (development)
+[ N 2018-03-20 13:57:51.8237 11262/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 13:57:51.8237 11262/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 13:57:51.8238 11262/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 13:57:51.8238 11262/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 13:57:51.8238 11262/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 13:57:51.8238 11262/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 13:57:51.8238 11262/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 13:57:51.8238 11262/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 13:57:51.8239 11262/Tg Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 13:57:51.8240 11262/Tg Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 13:57:51.8240 11262/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 11318, application /var/www/portal (development)
+[ N 2018-03-20 13:57:52.0906 11262/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 13:58:00.5395 11683/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 13:58:00.5500 11686/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 13:58:00.5501 11686/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 13:58:00.5572 11686/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 11686
+App 11725 stdout: 
+App 11725 stdout: 
+[ E 2018-03-20 13:58:03.7112 11686/Ti age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /var/www/portal: An error occurred while starting up the preloader.
+  Error ID: 46678887
+  Error details saved to: /tmp/passenger-error.XK0yYc
+  Message from application: Missing :action key on routes definition, please check your routes. (ArgumentError)
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:275:in `check_part'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:264:in `check_controller_and_action'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:178:in `normalize_options!'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:100:in `initialize'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:78:in `new'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:78:in `build'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1559:in `add_route'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1536:in `decomposed_match'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1517:in `block in match'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1507:in `each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1507:in `match'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:689:in `map_method'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:650:in `get'
+  /var/www/portal/config/routes.rb:6:in `block in <top (required)>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:423:in `instance_exec'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:423:in `eval_block'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:401:in `draw'
+  /var/www/portal/config/routes.rb:1:in `<top (required)>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:16:in `reload!'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `call'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `execute'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:27:in `updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/finisher.rb:69:in `block in <module:Finisher>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `instance_exec'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `run'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:226:in `block in tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:348:in `block (2 levels) in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:427:in `each_strongly_connected_component_from'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:347:in `block in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `call'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:224:in `tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:205:in `tsort_each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:54:in `run_initializers'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application.rb:352:in `initialize!'
+  /var/www/portal/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `instance_eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `preload_app'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:156:in `<module:App>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+
+
+[ E 2018-03-20 13:58:03.7184 11686/T7 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 46678887. Please see earlier logs for details about the error.
+[ N 2018-03-20 13:58:11.3626 11686/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-20 14:05:02.7879 11686/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 14:05:02.7880 11686/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 14:05:02.7880 11686/Tc Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 14:05:02.7880 11686/Tc Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 14:05:02.7881 11686/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 14:05:02.7881 11686/Tg Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 14:05:02.7881 11686/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 14:05:02.7881 11686/Tg Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 14:05:02.7881 11686/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 14:05:02.7881 11686/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 14:05:02.7881 11686/Te Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 14:05:02.7882 11686/Te Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 14:05:02.8420 11686/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 14:05:05.7846 11854/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 14:05:05.7952 11857/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 14:05:05.7953 11857/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 14:05:05.8023 11857/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 11857
+App 11898 stdout: 
+App 11898 stdout: 
+[ E 2018-03-20 14:05:08.9373 11857/Ti age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /var/www/portal: An error occurred while starting up the preloader.
+  Error ID: ab9865fe
+  Error details saved to: /tmp/passenger-error.bqV8hU
+  Message from application: Missing :action key on routes definition, please check your routes. (ArgumentError)
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:275:in `check_part'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:264:in `check_controller_and_action'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:178:in `normalize_options!'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:100:in `initialize'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:78:in `new'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:78:in `build'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1559:in `add_route'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1536:in `decomposed_match'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1517:in `block in match'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1507:in `each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1507:in `match'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:689:in `map_method'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:650:in `get'
+  /var/www/portal/config/routes.rb:6:in `block in <top (required)>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:423:in `instance_exec'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:423:in `eval_block'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:401:in `draw'
+  /var/www/portal/config/routes.rb:1:in `<top (required)>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:16:in `reload!'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `call'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `execute'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:27:in `updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/finisher.rb:69:in `block in <module:Finisher>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `instance_exec'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `run'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:226:in `block in tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:348:in `block (2 levels) in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:427:in `each_strongly_connected_component_from'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:347:in `block in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `call'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:224:in `tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:205:in `tsort_each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:54:in `run_initializers'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application.rb:352:in `initialize!'
+  /var/www/portal/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `instance_eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `preload_app'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:156:in `<module:App>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+
+
+[ E 2018-03-20 14:05:08.9442 11857/T6 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is ab9865fe. Please see earlier logs for details about the error.
+[ N 2018-03-20 14:05:11.4534 11857/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-20 14:05:57.2159 11857/T6 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 14:05:57.2159 11857/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 14:05:57.2160 11857/T6 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 14:05:57.2160 11857/T6 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 14:05:57.2160 11857/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 14:05:57.2160 11857/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 14:05:57.2160 11857/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 14:05:57.2160 11857/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 14:05:57.2160 11857/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 14:05:57.2161 11857/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 14:05:57.2161 11857/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 14:05:57.2161 11857/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 14:05:57.2791 11857/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 14:05:59.4118 11952/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 14:05:59.4224 11955/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 14:05:59.4225 11955/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 14:05:59.4295 11955/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 11955
+App 11994 stdout: 
+App 11994 stdout: 
+[ E 2018-03-20 14:06:02.5648 11955/Ti age/Cor/App/Implementation.cpp:304 ]: Could not spawn process for application /var/www/portal: An error occurred while starting up the preloader.
+  Error ID: b6b481e2
+  Error details saved to: /tmp/passenger-error.RTlhnZ
+  Message from application: Missing :controller key on routes definition, please check your routes. (ArgumentError)
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:275:in `check_part'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:255:in `check_controller_and_action'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:178:in `normalize_options!'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:100:in `initialize'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:78:in `new'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:78:in `build'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1559:in `add_route'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1536:in `decomposed_match'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1517:in `block in match'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1507:in `each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:1507:in `match'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:689:in `map_method'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:650:in `get'
+  /var/www/portal/config/routes.rb:6:in `block in <top (required)>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:423:in `instance_exec'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:423:in `eval_block'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:401:in `draw'
+  /var/www/portal/config/routes.rb:1:in `<top (required)>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `block in load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:240:in `load_dependency'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/dependencies.rb:268:in `load'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:16:in `reload!'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `call'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/file_update_checker.rb:75:in `execute'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:27:in `updater'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application/finisher.rb:69:in `block in <module:Finisher>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `instance_exec'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:30:in `run'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:226:in `block in tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:348:in `block (2 levels) in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:427:in `each_strongly_connected_component_from'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:347:in `block in each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `call'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:345:in `each_strongly_connected_component'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:224:in `tsort_each'
+  /home/justin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/tsort.rb:205:in `tsort_each'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/initializable.rb:54:in `run_initializers'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application.rb:352:in `initialize!'
+  /var/www/portal/config/environment.rb:5:in `<top (required)>'
+  config.ru:3:in `require'
+  config.ru:3:in `block in <main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `instance_eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/builder.rb:55:in `initialize'
+  config.ru:1:in `new'
+  config.ru:1:in `<main>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `eval'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:110:in `preload_app'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:156:in `<module:App>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:30:in `<module:PhusionPassenger>'
+  /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/helper-scripts/rack-preloader.rb:29:in `<main>'
+
+
+[ E 2018-03-20 14:06:02.5714 11955/T7 age/Cor/Con/CheckoutSession.cpp:285 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is b6b481e2. Please see earlier logs for details about the error.
+[ N 2018-03-20 14:06:03.2911 11955/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-20 14:07:16.5463 11955/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 14:07:16.5465 11955/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 14:07:16.5466 11955/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 14:07:16.5467 11955/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 14:07:16.5466 11955/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 14:07:16.5467 11955/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 14:07:16.5467 11955/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 14:07:16.5467 11955/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 14:07:16.5468 11955/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 14:07:16.5468 11955/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 14:07:16.5469 11955/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 14:07:16.5470 11955/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 14:07:16.6154 11955/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 14:07:18.6540 12071/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 14:07:18.6646 12074/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 14:07:18.6647 12074/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 14:07:18.6716 12074/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 12074
+App 12113 stdout: 
+App 12129 stdout: 
+[ N 2018-03-20 14:07:28.6165 12074/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-20 14:07:33.1561 12074/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 14:07:33.1561 12074/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 14:07:33.1562 12074/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 12129, application /var/www/portal (development)
+[ N 2018-03-20 14:07:33.1562 12074/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 14:07:33.1562 12074/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 14:07:33.1562 12074/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 14:07:33.1562 12074/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 14:07:33.1563 12074/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 14:07:33.1563 12074/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 14:07:33.1563 12074/Tg Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 14:07:33.1563 12074/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 14:07:33.1563 12074/Tg Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 14:07:33.1563 12074/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 14:07:33.1564 12074/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 12129, application /var/www/portal (development)
+[ N 2018-03-20 14:07:33.4232 12074/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 14:08:40.2114 12182/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 14:08:40.2221 12185/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 14:08:40.2222 12185/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 14:08:40.2292 12185/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 12185
+App 12224 stdout: 
+App 12240 stdout: 
+[ N 2018-03-20 14:08:48.3468 12185/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 12257 stdout: 
+[ N 2018-03-20 14:13:56.4072 12185/T4 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 12257, application /var/www/portal (development)
+
+[ N 2018-03-20 14:14:28.3138 12185/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 14:14:28.3138 12185/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 14:14:28.3138 12185/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 12240, application /var/www/portal (development)
+[ N 2018-03-20 14:14:28.3139 12185/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 14:14:28.3139 12185/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 14:14:28.3139 12185/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 14:14:28.3139 12185/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 14:14:28.3139 12185/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 14:14:28.3139 12185/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 14:14:28.3139 12185/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 14:14:28.3139 12185/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 14:14:28.3140 12185/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 14:14:28.3140 12185/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 14:14:28.3140 12185/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 12240, application /var/www/portal (development)
+[ N 2018-03-20 14:14:28.5800 12185/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 14:14:31.7447 12675/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 14:14:31.7563 12678/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 14:14:31.7564 12678/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 14:14:31.7634 12678/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 12678
+App 12718 stdout: 
+App 12734 stdout: 
+[ N 2018-03-20 14:14:36.4548 12678/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 12749 stdout: 
+App 12905 stdout: 
+[ N 2018-03-20 14:22:41.6316 12678/T3 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 12749, application /var/www/portal (development)
+[ N 2018-03-20 14:22:41.8323 12678/T3 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 12905, application /var/www/portal (development)
+
+[ N 2018-03-20 14:35:03.0859 12678/T6 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 14:35:03.0859 12678/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 14:35:03.0860 12678/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 12734, application /var/www/portal (development)
+[ N 2018-03-20 14:35:03.0860 12678/T6 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 14:35:03.0860 12678/Te Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 14:35:03.0860 12678/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 14:35:03.0860 12678/T6 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 14:35:03.0860 12678/Te Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 14:35:03.0861 12678/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 14:35:03.0860 12678/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 14:35:03.0861 12678/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 14:35:03.0861 12678/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 14:35:03.0862 12678/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 14:35:03.0862 12678/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 12734, application /var/www/portal (development)
+[ N 2018-03-20 14:35:03.3532 12678/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 14:35:10.7483 14154/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 14:35:10.7589 14157/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 14:35:10.7590 14157/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 14:35:10.7660 14157/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 14157
+App 14198 stdout: 
+App 14214 stdout: 
+[ N 2018-03-20 14:35:15.3995 14157/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-20 14:46:40.9987 14157/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 14:46:40.9987 14157/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 14:46:40.9987 14157/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 14214, application /var/www/portal (development)
+[ N 2018-03-20 14:46:40.9988 14157/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 14:46:40.9988 14157/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 14:46:40.9988 14157/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 14:46:40.9988 14157/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 14:46:40.9988 14157/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 14:46:40.9988 14157/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 14:46:40.9988 14157/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 14:46:40.9988 14157/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 14:46:40.9989 14157/Tg Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 14:46:40.9990 14157/Tg Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 14:46:40.9990 14157/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 14214, application /var/www/portal (development)
+[ N 2018-03-20 14:46:41.2658 14157/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 14:46:47.3715 14978/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 14:46:47.3820 14981/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 14:46:47.3821 14981/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 14:46:47.3891 14981/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 14981
+App 15020 stdout: 
+App 15036 stdout: 
+[ N 2018-03-20 14:46:51.5967 14981/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 15036 stdout: ©JèÂÃ±õ¶Ls”ëÈáò/ª”
+App 15036 stdout: hello
+
+[ N 2018-03-20 15:27:31.1290 14981/T6 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 15:27:31.1290 14981/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 15:27:31.1290 14981/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 15036, application /var/www/portal (development)
+[ N 2018-03-20 15:27:31.1291 14981/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 15:27:31.1291 14981/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 15:27:31.1291 14981/T6 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 15:27:31.1291 14981/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 15:27:31.1291 14981/T6 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 15:27:31.1291 14981/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 15:27:31.1291 14981/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 15:27:31.1291 14981/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 15:27:31.1292 14981/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 15:27:31.1292 14981/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 15:27:31.1292 14981/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 15036, application /var/www/portal (development)
+[ N 2018-03-20 15:27:31.3973 14981/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 15:27:34.8204 18099/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 15:27:34.8310 18102/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 15:27:34.8311 18102/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 15:27:34.8381 18102/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 18102
+App 18141 stdout: 
+App 18159 stdout: 
+[ N 2018-03-20 15:27:39.2384 18102/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-20 15:38:11.0501 18102/T6 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 15:38:11.0501 18102/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 15:38:11.0502 18102/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 18159, application /var/www/portal (development)
+[ N 2018-03-20 15:38:11.0502 18102/T6 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 15:38:11.0502 18102/T6 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 15:38:11.0502 18102/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 15:38:11.0502 18102/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 15:38:11.0502 18102/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 15:38:11.0503 18102/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 15:38:11.0503 18102/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 15:38:11.0503 18102/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 15:38:11.0503 18102/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 15:38:11.0503 18102/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 15:38:11.0504 18102/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 18159, application /var/www/portal (development)
+[ N 2018-03-20 15:38:11.3175 18102/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 15:38:18.0554 19049/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 15:38:18.0661 19052/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 15:38:18.0661 19052/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 15:38:18.0731 19052/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 19052
+App 19093 stdout: 
+App 19110 stdout: 
+[ N 2018-03-20 15:38:28.3721 19052/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-20 15:43:18.4253 19052/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 15:43:18.4253 19052/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 15:43:18.4253 19052/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 19110, application /var/www/portal (development)
+[ N 2018-03-20 15:43:18.4254 19052/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 15:43:18.4254 19052/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 15:43:18.4254 19052/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 15:43:18.4254 19052/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 15:43:18.4254 19052/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 15:43:18.4254 19052/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 15:43:18.4254 19052/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 15:43:18.4254 19052/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 15:43:18.4255 19052/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 15:43:18.4255 19052/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 15:43:18.4255 19052/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 19110, application /var/www/portal (development)
+[ N 2018-03-20 15:43:18.6921 19052/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 15:43:21.1426 19453/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 15:43:21.1532 19456/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 15:43:21.1533 19456/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 15:43:21.1603 19456/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 19456
+App 19495 stdout: 
+App 19513 stdout: 
+App 19495 stderr: 
+App 19495 stderr: ActionView::Template::Error: incompatible character encodings: ASCII-8BIT and UTF-8
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/core_ext/string/output_safety.rb:181:in `concat'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/core_ext/string/output_safety.rb:181:in `concat'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/buffers.rb:12:in `<<'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb:15:in `__home_justin__rvm_gems_ruby_______gems_actionpack_______lib_action_dispatch_middleware_templates_rescues_diagnostics_html_erb__3717037683890684098_70255303015180'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/template.rb:145:in `block in render'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/notifications.rb:166:in `instrument'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/template.rb:333:in `instrument'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/template.rb:143:in `render'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `block in instrument'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `instrument'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:14:in `render'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/renderer.rb:23:in `render'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/helpers/rendering_helper.rb:32:in `render'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:66:in `render_exception'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/web-console-2.3.0/lib/web_console/extensions.rb:3:in `render_exception_with_web_console'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:27:in `rescue in call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/web-console-2.3.0/lib/web_console/middleware.rb:28:in `block in call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/web-console-2.3.0/lib/web_console/middleware.rb:18:in `catch'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/web-console-2.3.0/lib/web_console/middleware.rb:18:in `call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+App 19495 stderr: 	from 
+App 19495 stderr: /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/methodoverride.rb:22:in `call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/runtime.rb:18:in `call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/lock.rb:17:in `call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/sendfile.rb:113:in `call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:160:in `accept_and_process_next_request'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+App 19495 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+[ N 2018-03-20 15:43:41.1904 19456/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-20 15:45:43.9561 19456/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 15:45:43.9561 19456/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 15:45:43.9562 19456/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 19513, application /var/www/portal (development)
+[ N 2018-03-20 15:45:43.9563 19456/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 15:45:43.9563 19456/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 15:45:43.9563 19456/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 15:45:43.9564 19456/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 15:45:43.9564 19456/Te Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 15:45:43.9564 19456/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 15:45:43.9564 19456/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 15:45:43.9564 19456/Te Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 15:45:43.9566 19456/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 15:45:43.9566 19456/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 15:45:43.9567 19456/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 19513, application /var/www/portal (development)
+[ N 2018-03-20 15:45:44.2230 19456/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 15:45:47.6091 19696/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 15:45:47.6197 19699/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 15:45:47.6198 19699/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 15:45:47.6268 19699/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 19699
+App 19740 stdout: 
+App 19756 stdout: 
+[ N 2018-03-20 15:45:52.5661 19699/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 19740 stderr: 
+App 19740 stderr: ActionView::Template::Error: incompatible character encodings: ASCII-8BIT and UTF-8
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/core_ext/string/output_safety.rb:181:in `concat'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/core_ext/string/output_safety.rb:181:in `concat'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/buffers.rb:12:in `<<'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb:15:in `__home_justin__rvm_gems_ruby_______gems_actionpack_______lib_action_dispatch_middleware_templates_rescues_diagnostics_html_erb__3938007847149817324_70137258288880'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/template.rb:145:in `block in render'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/notifications.rb:166:in `instrument'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/template.rb:333:in `instrument'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/template.rb:143:in `render'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `block in instrument'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `instrument'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:14:in `render'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/renderer/renderer.rb:23:in `render'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionview-4.2.0/lib/action_view/helpers/rendering_helper.rb:32:in `render'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:66:in `render_exception'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/web-console-2.3.0/lib/web_console/extensions.rb:3:in `render_exception_with_web_console'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:27:in `rescue in call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/web-console-2.3.0/lib/web_console/middleware.rb:28:in `block in call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/web-console-2.3.0/lib/web_console/middleware.rb:18:in `catch'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/web-console-2.3.0/lib/web_console/middleware.rb:18:in `call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+App 19740 stderr: 	from 
+App 19740 stderr: /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/methodoverride.rb:22:in `call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/runtime.rb:18:in `call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/lock.rb:17:in `call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/rack-1.6.9/lib/rack/sendfile.rb:113:in `call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:97:in `process_request'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:160:in `accept_and_process_next_request'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:113:in `main_loop'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/ruby_supportlib/phusion_passenger/request_handler.rb:416:in `block (3 levels) in start_threads'
+App 19740 stderr: 	from /home/justin/.rvm/gems/ruby-2.1.2/gems/passenger-5.2.1/src/ruby_supportlib/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+
+[ N 2018-03-20 15:52:52.4034 19699/T6 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 15:52:52.4035 19699/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 15:52:52.4035 19699/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 19756, application /var/www/portal (development)
+[ N 2018-03-20 15:52:52.4036 19699/T6 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 15:52:52.4036 19699/T6 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 15:52:52.4036 19699/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 15:52:52.4036 19699/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 15:52:52.4037 19699/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 15:52:52.4037 19699/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 15:52:52.4037 19699/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 15:52:52.4037 19699/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 15:52:52.4038 19699/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 15:52:52.4038 19699/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 15:52:52.4039 19699/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 19756, application /var/www/portal (development)
+[ N 2018-03-20 15:52:52.6697 19699/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 16:12:58.2556 21382/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 16:12:58.2663 21385/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 16:12:58.2663 21385/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 16:12:58.2733 21385/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 21385
+App 21426 stdout: 
+App 21442 stdout: 
+[ N 2018-03-20 16:13:04.9030 21385/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-20 16:15:21.3773 21385/T6 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 16:15:21.3774 21385/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 16:15:21.3775 21385/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 21442, application /var/www/portal (development)
+[ N 2018-03-20 18:50:38.8787 3034/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 18:50:38.9172 3037/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 18:50:38.9178 3037/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 18:50:38.9986 3037/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 3037
+[ E 2018-03-20 18:50:41.0875 3037/T5 age/Cor/SecurityUpdateChecker.h:505 ]: Security update check failed: Couldn't resolve host name while connecting to https://securitycheck.phusionpassenger.com/v1/check.json (check your DNS) (next check in 24 hours)
+App 3076 stdout: 
+App 3092 stdout: 
+
+[ N 2018-03-20 21:41:25.1604 3037/T8 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 21:41:25.1607 3037/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 21:41:25.1608 3037/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 3092, application /var/www/portal (development)
+[ N 2018-03-20 21:41:25.1610 3037/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 21:41:25.1611 3037/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 21:41:25.1610 3037/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 21:41:25.1611 3037/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 21:41:25.1612 3037/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 21:41:25.1612 3037/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 21:41:25.1613 3037/Te Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 21:41:25.1614 3037/Te Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 21:41:25.1615 3037/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 21:41:25.1615 3037/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 21:41:25.1616 3037/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 3092, application /var/www/portal (development)
+[ N 2018-03-20 21:41:25.4278 3037/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 21:41:29.0548 9603/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 21:41:29.0654 9606/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 21:41:29.0655 9606/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 21:41:29.0725 9606/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 9606
+[ E 2018-03-20 21:41:31.0782 9606/T5 age/Cor/SecurityUpdateChecker.h:505 ]: Security update check failed: Couldn't resolve host name while connecting to https://securitycheck.phusionpassenger.com/v1/check.json (check your DNS) (next check in 24 hours)
+App 9646 stdout: 
+App 9663 stdout: 
+
+[ N 2018-03-20 21:57:02.5120 9606/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 21:57:02.5121 9606/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 21:57:02.5121 9606/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 9663, application /var/www/portal (development)
+[ N 2018-03-20 21:57:02.5122 9606/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-20 21:57:02.5122 9606/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-20 21:57:02.5122 9606/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-20 21:57:02.5122 9606/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-20 21:57:02.5122 9606/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-20 21:57:02.5122 9606/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-20 21:57:02.5122 9606/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-20 21:57:02.5122 9606/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-20 21:57:02.5123 9606/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-20 21:57:02.5123 9606/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-20 21:57:02.5123 9606/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 9663, application /var/www/portal (development)
+[ N 2018-03-20 21:57:02.7782 9606/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-20 21:57:05.6833 10346/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-20 21:57:05.6939 10349/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-20 21:57:05.6940 10349/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-20 21:57:05.7009 10349/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 10349
+[ E 2018-03-20 21:57:07.7058 10349/T5 age/Cor/SecurityUpdateChecker.h:505 ]: Security update check failed: Couldn't resolve host name while connecting to https://securitycheck.phusionpassenger.com/v1/check.json (check your DNS) (next check in 24 hours)
+App 10388 stdout: 
+App 10404 stdout: 
+
+[ N 2018-03-20 22:06:10.0220 10349/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-20 22:06:10.0354 10349/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-20 22:06:10.0355 10349/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 10404, application /var/www/portal (development)
+Signal 15 (TERM) caught by ps (procps-ng version 3.3.10).
+ps:display.c:66: please report this bug
+[ W 2018-03-20 22:06:10.0390 10349/T3 age/Cor/App/Poo/AnalyticsCollection.cpp:61 ]: ERROR: The 'ps' command failed
+  Backtrace:
+     in 'void Passenger::ApplicationPool2::Pool::realCollectAnalytics()' (AnalyticsCollection.cpp:183)
+     in 'static void Passenger::ApplicationPool2::Pool::collectAnalytics(Passenger::ApplicationPool2::PoolPtr)' (AnalyticsCollection.cpp:56)
+
+[ N 2018-03-21 09:48:02.8423 3511/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-21 09:48:02.9382 3514/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-21 09:48:02.9388 3514/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-21 09:48:03.0281 3514/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 3514
+App 3555 stdout: 
+[ N 2018-03-21 09:48:11.0998 3514/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 3575 stdout: 
+
+[ N 2018-03-21 10:52:32.9099 3514/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-21 10:52:32.9099 3514/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-21 10:52:32.9099 3514/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 3575, application /var/www/portal (development)
+[ N 2018-03-21 10:52:32.9100 3514/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-21 10:52:32.9100 3514/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-21 10:52:32.9100 3514/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-21 10:52:32.9100 3514/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-21 10:52:32.9100 3514/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-21 10:52:32.9100 3514/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-21 10:52:32.9100 3514/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-21 10:52:32.9101 3514/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-21 10:52:32.9102 3514/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-21 10:52:32.9102 3514/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-21 10:52:32.9102 3514/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 3575, application /var/www/portal (development)
+[ N 2018-03-21 10:52:33.1770 3514/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-21 10:52:35.1007 12751/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-21 10:52:35.1112 12754/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-21 10:52:35.1113 12754/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-21 10:52:35.1183 12754/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 12754
+App 12794 stdout: 
+App 12810 stdout: 
+[ N 2018-03-21 10:52:38.8098 12754/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-03-21 14:08:05.6478 12754/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-21 14:08:05.6478 12754/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-21 14:08:05.6478 12754/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 12810, application /var/www/portal (development)
+[ N 2018-03-21 14:08:05.6479 12754/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-21 14:08:05.6479 12754/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-21 14:08:05.6479 12754/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-21 14:08:05.6479 12754/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-21 14:08:05.6479 12754/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-21 14:08:05.6479 12754/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-21 14:08:05.6479 12754/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-21 14:08:05.6480 12754/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-21 14:16:27.6914 2631/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-21 14:16:27.8130 2639/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-21 14:16:27.8137 2639/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-21 14:16:27.8839 2639/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 2639
+App 2696 stdout: 
+[ N 2018-03-21 14:16:32.2419 2639/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 2868 stdout: 
+App 2876 stdout: 
+[ N 2018-03-21 14:22:11.3931 2639/T4 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 2876, application /var/www/portal (development)
+
+[ N 2018-03-21 15:01:16.6304 2639/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-21 15:01:16.6304 2639/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-21 15:01:16.6305 2639/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 2868, application /var/www/portal (development)
+[ N 2018-03-21 15:01:16.6305 2639/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-21 15:01:16.6305 2639/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-21 15:01:16.6305 2639/Tc Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-21 15:01:16.6305 2639/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-21 15:01:16.6306 2639/Tc Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-21 15:01:16.6306 2639/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-21 15:01:16.6306 2639/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-21 15:01:16.6306 2639/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-21 15:01:16.6307 2639/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-21 15:01:16.6307 2639/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-21 15:01:16.6308 2639/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 2868, application /var/www/portal (development)
+[ N 2018-03-21 15:01:16.8988 2639/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-21 15:05:18.8567 6061/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-21 15:05:18.8673 6064/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-21 15:05:18.8674 6064/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-21 15:05:18.8743 6064/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 6064
+App 6103 stdout: 
+App 6119 stdout: 
+[ N 2018-03-21 15:05:22.6355 6064/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 6131 stdout: 
+[ N 2018-03-21 15:34:23.7536 6064/T3 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 6119, application /var/www/portal (development)
+App 7924 stdout: 
+App 7941 stdout: 
+[ N 2018-03-21 15:56:18.4554 6064/T3 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 6131, application /var/www/portal (development)
+App 8164 stdout: 
+App 8180 stdout: 
+
+[ N 2018-03-21 16:00:21.6888 6064/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-21 16:00:21.6889 6064/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-21 16:00:21.6889 6064/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 7941, application /var/www/portal (development)
+[ N 2018-03-21 16:00:21.6889 6064/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 8180, application /var/www/portal (development)
+[ N 2018-03-21 16:00:21.6890 6064/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-21 16:00:21.6890 6064/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-21 16:00:21.6890 6064/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-21 16:00:21.6890 6064/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-21 16:00:21.6890 6064/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-21 16:00:21.6890 6064/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-21 16:00:21.6890 6064/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-21 16:00:21.6890 6064/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-21 16:00:21.6891 6064/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-21 16:00:21.6891 6064/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-21 16:00:21.6891 6064/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 7941, application /var/www/portal (development)
+[ N 2018-03-21 16:00:21.6891 6064/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 8180, application /var/www/portal (development)
+[ N 2018-03-21 16:00:21.9676 6064/T1 age/Cor/CoreMain.cpp:1227 ]: Passenger core shutdown finished
+[ N 2018-03-21 19:46:29.9887 3273/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-21 19:46:30.0166 3276/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-21 19:46:30.0171 3276/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-21 19:46:30.0975 3276/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 3276
+[ E 2018-03-21 19:46:32.1850 3276/T5 age/Cor/SecurityUpdateChecker.h:505 ]: Security update check failed: Couldn't resolve host name while connecting to https://securitycheck.phusionpassenger.com/v1/check.json (check your DNS) (next check in 24 hours)
+App 3315 stdout: 
+App 3331 stdout: 
+App 3565 stdout: 
+[ N 2018-03-21 20:39:07.4919 3276/T3 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 3331, application /var/www/portal (development)
+App 4384 stdout: 
+App 4400 stdout: 
+
+[ N 2018-03-21 20:49:05.0067 3276/T8 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-21 20:49:05.0067 3276/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-21 20:49:05.0068 3276/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 3565, application /var/www/portal (development)
+[ N 2018-03-21 20:49:05.0069 3276/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 4400, application /var/www/portal (development)
+[ N 2018-03-21 20:49:05.0069 3276/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-21 20:49:05.0070 3276/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-21 20:49:05.0070 3276/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-21 20:49:05.0070 3276/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-21 20:49:05.0070 3276/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-21 20:49:05.0071 3276/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-21 20:49:05.0071 3276/Td Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-21 20:49:05.0071 3276/Td Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-21 20:49:05.0105 3276/Tf Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-21 20:49:05.0105 3276/Tf Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-21 20:49:05.0106 3276/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 3565, application /var/www/portal (development)
+[ N 2018-03-21 20:49:05.0106 3276/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 4400, application /var/www/portal (development)
+[ N 2018-03-22 11:06:57.2028 2930/T1 age/Wat/WatchdogMain.cpp:1258 ]: Starting Passenger watchdog...
+[ N 2018-03-22 11:06:57.3309 2933/T1 age/Cor/CoreMain.cpp:1242 ]: Starting Passenger core...
+[ N 2018-03-22 11:06:57.3315 2933/T1 age/Cor/CoreMain.cpp:252 ]: Passenger core running in multi-application mode.
+[ N 2018-03-22 11:06:57.3872 2933/T1 age/Cor/CoreMain.cpp:977 ]: Passenger core online, PID 2933
+App 2972 stdout: 
+App 2988 stdout: 
+App 3005 stdout: 
+[ E 2018-03-22 11:07:19.4377 2933/T5 age/Cor/SecurityUpdateChecker.h:505 ]: Security update check failed: Couldn't resolve host name while connecting to https://securitycheck.phusionpassenger.com/v1/check.json (check your DNS) (next check in 24 hours)
+[ N 2018-03-22 11:12:21.1708 2933/T3 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 2988, application /var/www/portal (development)
+App 3331 stdout: 
+App 3347 stdout: 
+[ N 2018-03-22 11:22:38.5661 2933/T3 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 3005, application /var/www/portal (development)
+App 9285 stdout: 
+App 9303 stdout: 
+[ N 2018-03-22 14:12:55.5290 2933/T3 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 9303, application /var/www/portal (development)
+
+[ N 2018-03-22 16:08:51.1544 2933/T7 age/Cor/CoreMain.cpp:616 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-03-22 16:08:51.1546 2933/T1 age/Cor/CoreMain.cpp:1154 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-03-22 16:08:51.1546 2933/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 3347, application /var/www/portal (development)
+[ N 2018-03-22 16:08:51.1549 2933/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-03-22 16:08:51.1550 2933/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-03-22 16:08:51.1551 2933/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-03-22 16:08:51.1551 2933/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-03-22 16:08:51.1552 2933/Tb Ser/Server.h:903 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2018-03-22 16:08:51.1552 2933/Tb Ser/Server.h:559 ]: [ServerThr.3] Shutdown finished
+[ N 2018-03-22 16:08:51.1553 2933/Te Ser/Server.h:903 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2018-03-22 16:08:51.1554 2933/Te Ser/Server.h:559 ]: [ServerThr.4] Shutdown finished
+[ N 2018-03-22 16:08:51.1675 2933/Tg Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-03-22 16:08:51.1676 2933/Tg Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-03-22 16:08:51.1677 2933/T1 age/Cor/CoreMain.cpp:1068 ]: Checking whether to disconnect long-running connections for process 3347, application /var/www/portal (development)

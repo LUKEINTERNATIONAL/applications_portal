@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Applications Portal</title>
+    <style>
+      body {
+        margin: 10px;
+        -moz-user-select: none;
+        overflow: hidden;
+        font-family: "Nimbus Sans L", "Arial Narrow", sans-serif;
+        min-width: 1250px;
+        min-height: 700px;
+      }
+      
+      .table {
+        display: table;
+      }
+      
+      .row {
+        display: table-row;
+      }
+      
+      .cell {
+        display: table-cell;
+      }
+          
+      .empty {
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        width: 180px;
+        height: 150px;
+        float: left;
+        margin: 10px;
+      }
+           
+      button {
+          font-size: 1em;
+          padding: 15px;
+          min-width: 120px;
+          cursor: pointer;
+          min-height: 75px;
+          border-radius: 10px !important;
+          margin: 3px;
+      }
+        
+      .button {
+        border: 1px solid #3465a4;
+        border-radius: 15px;
+        width: 180px;
+        height: 150px;
+        float: left;
+        margin: 10px;
+        cursor: pointer;
+        vertical-align: middle; 
+        text-align: center;
+      }
+
+      .button:hover {
+        background-color: #c2d3f4;
+        color: #0e2a64;
+        text-decoration: underline;
+      }
+
+      .button:active {
+        background-color: #f3e7c0;
+      }
+
+      .button_blue{
+           border:1px solid #7eb9d0; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:28px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+           background-color: #a7cfdf; background-image: -webkit-gradient(linear, left top, left bottom, from(#a7cfdf), to(#23538a));
+           background-image: -webkit-linear-gradient(top, #a7cfdf, #23538a);
+           background-image: -moz-linear-gradient(top, #a7cfdf, #23538a);
+           background-image: -ms-linear-gradient(top, #a7cfdf, #23538a);
+           background-image: -o-linear-gradient(top, #a7cfdf, #23538a);
+           background-image: linear-gradient(to bottom, #a7cfdf, #23538a);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a7cfdf, endColorstr=#23538a);
+      }
+
+      .button_blue:hover{
+           border:1px solid #5ca6c4;
+           background-color: #82bbd1; background-image: -webkit-gradient(linear, left top, left bottom, from(#82bbd1), to(#193b61));
+           background-image: -webkit-linear-gradient(top, #82bbd1, #193b61);
+           background-image: -moz-linear-gradient(top, #82bbd1, #193b61);
+           background-image: -ms-linear-gradient(top, #82bbd1, #193b61);
+           background-image: -o-linear-gradient(top, #82bbd1, #193b61);
+           background-image: linear-gradient(to bottom, #82bbd1, #193b61);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#82bbd1, endColorstr=#193b61);
+      }
+
+      .button_green{
+           border:1px solid #34740e; 
+           -webkit-border-radius: 3px; 
+           -moz-border-radius: 3px;
+           border-radius: 3px;
+           font-size:28px;
+           font-family:arial, helvetica, sans-serif; 
+           padding: 10px 10px 10px 10px; 
+           text-decoration:none; 
+           display:inline-block;
+           text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+           font-weight:bold; color: #FFFFFF;
+           background-color: #4ba614; 
+           background-image: -webkit-gradient(linear, left top, left bottom, from(#4ba614), to(#008c00));
+           background-image: -webkit-linear-gradient(top, #4ba614, #008c00);
+           background-image: -moz-linear-gradient(top, #4ba614, #008c00);
+           background-image: -ms-linear-gradient(top, #4ba614, #008c00);
+           background-image: -o-linear-gradient(top, #4ba614, #008c00);
+           background-image: linear-gradient(to bottom, #4ba614, #008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);
+      }
+
+      .button_green:hover{
+           border:1px solid #224b09;
+           background-color: #36780f; background-image: -webkit-gradient(linear, left top, left bottom, from(#36780f), to(#005900));
+           background-image: -webkit-linear-gradient(top, #36780f, #005900);
+           background-image: -moz-linear-gradient(top, #36780f, #005900);
+           background-image: -ms-linear-gradient(top, #36780f, #005900);
+           background-image: -o-linear-gradient(top, #36780f, #005900);
+           background-image: linear-gradient(to bottom, #36780f, #005900);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#36780f, endColorstr=#005900);
+      }
+
+      .button_red{
+           border:1px solid #72021c; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:28px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+           background-color: #a90329; background-image: -webkit-gradient(linear, left top, left bottom, from(#a90329), to(#6d0019));
+           background-image: -webkit-linear-gradient(top, #a90329, #6d0019);
+           background-image: -moz-linear-gradient(top, #a90329, #6d0019);
+           background-image: -ms-linear-gradient(top, #a90329, #6d0019);
+           background-image: -o-linear-gradient(top, #a90329, #6d0019);
+           background-image: linear-gradient(to bottom, #a90329, #6d0019);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a90329, endColorstr=#6d0019);
+      }
+
+      .button_red:hover{
+           border:1px solid #450111;
+           background-color: #77021d; background-image: -webkit-gradient(linear, left top, left bottom, from(#77021d), to(#3a000d));
+           background-image: -webkit-linear-gradient(top, #77021d, #3a000d);
+           background-image: -moz-linear-gradient(top, #77021d, #3a000d);
+           background-image: -ms-linear-gradient(top, #77021d, #3a000d);
+           background-image: -o-linear-gradient(top, #77021d, #3a000d);
+           background-image: linear-gradient(to bottom, #77021d, #3a000d);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#77021d, endColorstr=#3a000d);
+      }
+
+      .button_gray{
+           border:1px solid #ccc; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:28px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+           background-color: #ccc; background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999));
+           background-image: -webkit-linear-gradient(top, #ccc, #999);
+           background-image: -moz-linear-gradient(top, #ccc, #999);
+           background-image: -ms-linear-gradient(top, #ccc, #999);
+           background-image: -o-linear-gradient(top, #ccc, #999);
+           background-image: linear-gradient(to bottom, #ccc, #999);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ccc, endColorstr=#999);
+      }
+
+      .button_gray:hover{
+           border:1px solid #ccc;
+           background-color: #ddd; background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#ccc));
+           background-image: -webkit-linear-gradient(top, #333, #ccc);
+           background-image: -moz-linear-gradient(top, #333, #ccc);
+           background-image: -ms-linear-gradient(top, #333, #ccc);
+           background-image: -o-linear-gradient(top, #333, #ccc);
+           background-image: linear-gradient(to bottom, #333, #ccc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#333, endColorstr=#ccc);
+      }
+      
+      .input_cell {
+        font-size: 1.2em; 
+        padding: 10px; 
+        border: 1px solid #3465a4;
+        border-radius: 10px;
+        width: 100%;
+      }
+        
+      .error_text {
+        color: red !important;
+      }  
+        
+      .error_input {
+        font-size: 1.2em; 
+        padding: 10px; 
+        border-radius: 10px;
+        width: 100%;
+        border: 2px red solid;
+      }  
+      
+    </style>
+  </head>
+  <body onresize="resize()" onload="resize()">
+    <div id="main" style="border: 1px solid #000; overflow: auto; padding: 0px;">
+    
+      <%= yield %>
+      
+    </div>
+    <script>
+      <!--
+      var imgTick = 'data:image/png;base64,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';
+      
+      var imgUnTick = 'data:image/png;base64,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';
+         
+      var currentCaseUpper = true;
+      var currentKeysNumeric = false;
+      var currentKeysQWERTY = false;
+            
+      function __$(id){
+        return document.getElementById(id);
+      }
+      
+      function resize(){
+        if(__$("main")){
+          __$("main").style.height = (window.innerHeight - 20) + "px";
+        }
+      }
+      
+      function checkCtrl(obj){
+          var o = obj;
+          var t = o.offsetTop;
+          var l = o.offsetLeft + 1;
+          var w = o.offsetWidth;
+          var h = o.offsetHeight;
+
+          while((o ? (o.offsetParent != document.body) : false)){
+              o = o.offsetParent;
+              t += (o ? o.offsetTop : 0);
+              l += (o ? o.offsetLeft : 0);
+          }
+          return [w, h, t, l];
+      }
+
+      function showKeyboard(ctrl, disabled, numbers, caps){
+          if(__$('keyboard') && numbers == undefined){
+              
+              __$('main').removeChild(__$('keyboard'));
+              
+          } else {
+          
+              if(__$('keyboard')){
+                __$('main').removeChild(__$('keyboard'));
+              }
+          
+              target = ctrl;
+          
+              var pos = checkCtrl(ctrl);
+              
+              if(typeof(disabled) == 'undefined') disabled = {};
+              
+              if(typeof(numbers) == 'undefined') numbers = false;
+              
+              if(typeof(caps) == 'undefined') caps = false;
+              
+              currentCaseUpper = caps;
+              
+              currentKeysNumeric = numbers;
+              
+              var div = document.createElement('div');
+              div.id = 'keyboard';
+              div.style.position = 'absolute';
+              div.style.border = '1px solid #5ca6c4';
+              div.style.borderRadius = '10px';
+              div.style.left = pos[3] + 'px';
+              div.style.top = (pos[2] + pos[1] + 2 - __$('main').scrollTop) + 'px';
+              div.style.zIndex = '1000';
+              div.style.backgroundColor = 'rgba(255,255,255,0.8)';
+              
+              __$('main').appendChild(div);
+              
+              var keys;
+              
+              if(currentKeysNumeric){
+               
+                keys = [[1,2,3,':'],[4,5,6,'/'],[7,8,9,'.'],['&larr;',0,'','abc']];
+                
+              } else {
+               
+                if(currentKeysQWERTY){
+                  
+                  keys = [["Q","W","E","R","T","Y","U","I","O","P"],["A","S","D","F","G","H","J","K","L"],['',"Z","X","C","V","B","N","M",'',"CAP"],['','|_|','&larr;',":",".","/","num","abc"]];
+                  
+                } else {
+                
+                  keys = [["A","B","C","D","E","F","G","H","I"],["J","K","L","M","N","O","P","Q","R"],["S","T","U","V","W","X","Y","Z","CAP"],['','|_|','&larr;',":",".","/","num","qwe"]];
+                  
+                }
+                
+              }
+              
+              var letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+                                  
+              var table = document.createElement('div');
+              table.style.display = 'table';
+              table.style.margin = 'auto';
+              
+              div.appendChild(table);
+              
+              for(var i = 0; i < keys.length; i++){
+                  var row = document.createElement('div');
+                  row.style.display = 'table-row';
+                  
+                  table.appendChild(row);
+                  
+                  for(var j = 0; j < keys[i].length; j++){
+                      var cell = document.createElement('div');
+                      cell.style.display = 'table-cell';
+                      
+                      row.appendChild(cell);
+                      
+                      if(String(keys[i][j]).trim().length == 0){
+                        cell.innerHTML = "&nbsp;";
+                        
+                        continue;
+                      }
+                      
+                      var button = document.createElement('button');
+                      button.setAttribute('class', (disabled[keys[i][j]] ? 'button_gray' : 'button_blue'));
+                      button.style.width = '75px';
+                      button.style.height = '70px';
+                      button.style.minWidth = '40px';
+                      button.style.minHeight = '40px';
+                      button.style.margin = '2px';
+                      
+                      button.id = keys[i][j];
+                      
+                      if(target && keys[i][j] == '.'){
+                          if(target.value.trim().match(/\./) || target.value.trim().length == 0){
+                              button.setAttribute('class', 'button_gray');
+                          } else {
+                              button.setAttribute('class', 'button_blue');
+                          }
+                      }
+                      
+                      if(letters[keys[i][j]]){
+                        
+                        button.innerHTML = (String(keys[i][j]).trim() == "cap" && !currentCaseUpper ? String(keys[i][j]).toLowerCase() : (currentCaseUpper ? String(keys[i][j]).toUpperCase() : String(keys[i][j]).toLowerCase()));
+                        
+                      } else {
+                      
+                        button.innerHTML = keys[i][j];
+                      
+                      }
+                      
+                      if(disabled[keys[i][j]]){
+                              button.setAttribute('class', 'button_gray');
+                      } else {
+                          button.setAttribute('class', 'button_blue');
+                          
+                          button.onmousedown = function(){
+                              if(this.innerHTML.trim() == '←'){
+                                  if(target){
+                                      target.value = target.value.trim().substring(0,(target.value.trim().length - 1));
+                                  }
+                              /*} else if(this.innerHTML.trim() == '.' && currentKeysNumeric){
+                                  if(!target.value.trim().match(/\./)){
+                                      target.value += this.innerHTML.trim();
+                                  }*/
+                              } else if(this.innerHTML.trim() == 'num'){
+                                  
+                                  currentKeysNumeric = true;
+                                  
+                                  showKeyboard(__$(target.id), {}, currentKeysNumeric, currentCaseUpper);
+                                  
+                              } else if(this.innerHTML.trim() == 'abc'){
+                                  
+                                  currentKeysQWERTY = false;
+                                  
+                                  currentKeysNumeric = false;
+                                  
+                                  showKeyboard(__$(target.id), {}, currentKeysNumeric, currentCaseUpper);
+                                  
+                              } else if(this.innerHTML.trim() == 'qwe'){
+                                  
+                                  currentKeysQWERTY = true;
+                                  
+                                  currentKeysNumeric = false;
+                                  
+                                  showKeyboard(__$(target.id), {}, currentKeysNumeric, currentCaseUpper);
+                                  
+                              } else if(this.innerHTML.trim().toLowerCase() == 'cap'){
+                                  currentCaseUpper = !currentCaseUpper;
+                                  
+                                  if(!currentCaseUpper){
+                                    this.innerHTML = "CAP";
+                                    
+                                    for(var l = 0; l < letters.length; l++){
+                                      if(__$(letters[l])){
+                                        __$(letters[l]).innerHTML = letters[l].toUpperCase();
+                                      } 
+                                    }
+                                    
+                                  } else {
+                                    this.innerHTML = "cap";
+                                    
+                                    for(var l = 0; l < letters.length; l++){
+                                      if(__$(letters[l])){
+                                        __$(letters[l]).innerHTML = letters[l].toLowerCase();
+                                      }
+                                    }
+                                    
+                                  }
+                                 
+                              } else if(this.innerHTML.trim() == '|_|'){ 
+                                 
+                                 target.value += " ";
+                                 
+                              } else {
+                              
+                                  target.value += (currentCaseUpper ? this.innerHTML.trim().toLowerCase() : this.innerHTML.trim());
+                                  
+                              }
+                              
+                              /*if(target.value.trim().match(/\./) && currentKeysNumeric){
+                                  if(__$('.')){
+                                      __$('.').setAttribute('class', 'button_gray');
+                                  } 
+                              } else {*/
+                              
+                              __$('.').setAttribute('class', 'button_blue');
+                              
+                              // }
+                          }
+                      }
+                      
+                      cell.appendChild(button);
+                  }
+              }
+              
+              if(__$("keyboard")){
+              
+                // [w, h, t, l]
+                var kpos = checkCtrl(__$("keyboard"));
+                var w = window.innerWidth;
+                var h = window.innerHeight;
+                
+                if(kpos[0] + kpos[3] > w){
+                  
+                  __$("keyboard").style.left = (w - kpos[0] - 10) + "px";
+                  
+                }                
+                
+                if(kpos[1] + kpos[2] > h){
+                  
+                  __$("keyboard").style.top = (pos[2] - kpos[1] - 2) + "px";
+                  
+                }                
+                
+              }
+              
+          }
+          
+          
+      }          
+     
+      //-->
+    </script>
+    
+    <script>
+      <!--
+      
+      <% if !flash[:notice].blank? %>
+      
+        alert("<%= flash[:notice] %>");
+      
+        <% flash[:notice] = nil %>
+        
+      <% end %>
+      
+      <% if !flash[:error].blank? %>
+      
+        alert("<%= flash[:error] %>");
+      
+        <% flash[:error] = nil %>
+        
+      <% end %>
+      
+      //-->    
+    </script>
+
+  </body>
+</html>
